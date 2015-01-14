@@ -1,22 +1,62 @@
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\vc120.pdb
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\vc120.idb
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\entry.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\gamelogic.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\gamewindow.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\matrix4x4.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\player.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\shaperectangle.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\entry.nativecodeanalysis.xml
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\gamelogic.nativecodeanalysis.xml
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\gamewindow.nativecodeanalysis.xml
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\matrix4x4.nativecodeanalysis.xml
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\player.nativecodeanalysis.xml
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\shaperectangle.nativecodeanalysis.xml
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\vector4.nativecodeanalysis.xml
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\vector4.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\shaperectangle.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\player.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\matrix4x4.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\gamewindow.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\gamelogic.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\entry.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\projectile.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\time.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\enemy.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\collidercomponent.obj
+c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\colliderrectangle.obj
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\debug\spaceships2d.ilk
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\debug\spaceships2d.exe
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\debug\spaceships2d.pdb
 c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.res
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\cl.command.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\cl.read.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\cl.write.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\link.command.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\link.read.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\link.write.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\rc.command.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\rc.read.1.tlog
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\debug\spaceships2d.tlog\rc.write.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\collidercomponent.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\colliderrectangle.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\enemy.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\entry.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\gamelogic.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\gamewindow.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\matrix4x4.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\player.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\projectile.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\shaperectangle.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\time.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\vector4.obj
+d:\github\spaceships-2d\source\spaceships2d\debug\nativecodeanalysis.read.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.res
+d:\github\spaceships-2d\source\spaceships2d\debug\vc120.idb
+d:\github\spaceships-2d\source\spaceships2d\debug\vc120.pdb
+d:\github\spaceships-2d\source\spaceships2d\debug\entry.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\gamelogic.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\gamewindow.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\matrix4x4.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\player.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\shaperectangle.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\vc.nativecodeanalysis.all.xml
+d:\github\spaceships-2d\source\spaceships2d\debug\vector4.nativecodeanalysis.xml
+d:\github\spaceships-2d\source\debug\spaceships2d.pdb
+d:\github\spaceships-2d\source\debug\spaceships2d.exe
+d:\github\spaceships-2d\source\debug\spaceships2d.ilk
+d:\github\spaceships-2d\source\debug\spaceships2d.exe.lastcodeanalysissucceeded
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\cl.command.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\cl.read.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\cl.write.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\link.command.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\link.read.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\link.write.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\rc.command.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\rc.read.1.tlog
+d:\github\spaceships-2d\source\spaceships2d\debug\spaceships2d.tlog\rc.write.1.tlog
