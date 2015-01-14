@@ -1,35 +1,18 @@
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\vc140.pdb
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\vector4.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\shaperectangle.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\player.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\matrix4x4.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\gamewindow.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\gamelogic.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\entry.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\time.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\projectile.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\enemy.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\colliderrectangle.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\collidercomponent.obj
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\release\spaceships2d.exe
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\release\spaceships2d.pdb
-c:\users\jordan\documents\visual studio 2015\projects\spaceships2d\spaceships2d\release\spaceships2d.res
-d:\github\spaceships-2d\source\spaceships2d\release\collidercomponent.obj
-d:\github\spaceships-2d\source\spaceships2d\release\colliderrectangle.obj
-d:\github\spaceships-2d\source\spaceships2d\release\enemy.obj
-d:\github\spaceships-2d\source\spaceships2d\release\entry.obj
-d:\github\spaceships-2d\source\spaceships2d\release\gamelogic.obj
-d:\github\spaceships-2d\source\spaceships2d\release\gamewindow.obj
-d:\github\spaceships-2d\source\spaceships2d\release\matrix4x4.obj
-d:\github\spaceships-2d\source\spaceships2d\release\player.obj
-d:\github\spaceships-2d\source\spaceships2d\release\projectile.obj
-d:\github\spaceships-2d\source\spaceships2d\release\shaperectangle.obj
-d:\github\spaceships-2d\source\spaceships2d\release\time.obj
+d:\github\spaceships-2d\source\spaceships2d\release\vc120.pdb
 d:\github\spaceships-2d\source\spaceships2d\release\vector4.obj
-d:\github\spaceships-2d\source\spaceships2d\release\spaceships2d.res
-d:\github\spaceships-2d\source\spaceships2d\release\vc140.pdb
-d:\github\spaceships-2d\source\release\spaceships2d.pdb
+d:\github\spaceships-2d\source\spaceships2d\release\shaperectangle.obj
+d:\github\spaceships-2d\source\spaceships2d\release\projectile.obj
+d:\github\spaceships-2d\source\spaceships2d\release\player.obj
+d:\github\spaceships-2d\source\spaceships2d\release\matrix4x4.obj
+d:\github\spaceships-2d\source\spaceships2d\release\gamewindow.obj
+d:\github\spaceships-2d\source\spaceships2d\release\gamelogic.obj
+d:\github\spaceships-2d\source\spaceships2d\release\entry.obj
+d:\github\spaceships-2d\source\spaceships2d\release\enemy.obj
+d:\github\spaceships-2d\source\spaceships2d\release\colliderrectangle.obj
+d:\github\spaceships-2d\source\spaceships2d\release\collidercomponent.obj
 d:\github\spaceships-2d\source\release\spaceships2d.exe
+d:\github\spaceships-2d\source\release\spaceships2d.pdb
+d:\github\spaceships-2d\source\spaceships2d\release\spaceships2d.res
 d:\github\spaceships-2d\source\spaceships2d\release\spaceships2d.tlog\cl.command.1.tlog
 d:\github\spaceships-2d\source\spaceships2d\release\spaceships2d.tlog\cl.read.1.tlog
 d:\github\spaceships-2d\source\spaceships2d\release\spaceships2d.tlog\cl.write.1.tlog

@@ -1,9 +1,7 @@
-﻿Build started 14/01/2015 17:37:01.
+﻿Build started 14/01/2015 19:19:23.
      1>Project "D:\GitHub\Spaceships-2D\Source\Spaceships2D\Spaceships2D.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ColliderComponent.cpp ColliderRectangle.cpp Enemy.cpp Entry.cpp GameLogic.cpp GameWindow.cpp Matrix4x4.cpp Player.cpp Projectile.cpp ShapeRectangle.cpp Vector4.cpp
-         ColliderComponent.cpp
-         ColliderRectangle.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Enemy.cpp Entry.cpp GameLogic.cpp GameWindow.cpp Matrix4x4.cpp Player.cpp Projectile.cpp ShapeRectangle.cpp Vector4.cpp
          Enemy.cpp
          Entry.cpp
          GameLogic.cpp
@@ -17,8 +15,6 @@
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /l"0x0409" /nologo /fo"Release\Spaceships2D.res" Spaceships2D.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHub\Spaceships-2D\Source\Release\Spaceships2D.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHub\Spaceships-2D\Source\Release\Spaceships2D.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHub\Spaceships-2D\Source\Release\Spaceships2D.lib" /MACHINE:X86 /SAFESEH Release\Spaceships2D.res
-         Release\ColliderComponent.obj
-         Release\ColliderRectangle.obj
          Release\Enemy.obj
          Release\Entry.obj
          Release\GameLogic.obj
@@ -35,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.00
+Time Elapsed 00:00:05.60

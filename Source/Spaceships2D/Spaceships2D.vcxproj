@@ -78,8 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ColliderComponent.cpp" />
-    <ClCompile Include="ColliderRectangle.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="GameLogic.cpp" />
@@ -92,8 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
-    <ClInclude Include="ColliderComponent.h" />
-    <ClInclude Include="ColliderRectangle.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameLogic.h" />
     <ClInclude Include="GameObject.h" />

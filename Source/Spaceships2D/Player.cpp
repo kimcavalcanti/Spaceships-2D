@@ -125,5 +125,4 @@ void Player::Cleanup()
 			m_projectiles.erase(m_projectiles.begin() + index);
 		}
 	}
-	//m_projectiles.shrink_to_fit();
 }

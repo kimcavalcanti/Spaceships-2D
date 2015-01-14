@@ -9,15 +9,9 @@ Enemy::Enemy(const float speed, const float originX, const float originY)
 	m_shapeComponent->SetColour(150, 150, 150);
 
 	m_shapeComponent->m_transformComponent = this->m_transformComponent;
-	m_colliderComponent->m_transformComponent = this->m_transformComponent;
 	m_transformComponent->Translate(originX, originY, 0.f);
 
 	m_speed = speed;
-
-	for (const Vector4 &vec : m_shapeComponent->GetVertexList())
-	{
-		m_colliderComponent->AddVertex(vec);
-	}
 }
 
 Enemy::~Enemy()
