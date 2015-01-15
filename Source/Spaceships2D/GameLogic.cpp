@@ -158,6 +158,12 @@ void GameLogic::Run()
 			// Render game objects to screen
 			GameWindow::GetInstance().Render(m_renderables);
 		}
+
+		// End game if player is touched
+		if (m_renderables[0]->CanDestroy())
+		{
+			PostQuitMessage(0);
+		}
 	}
 }
 

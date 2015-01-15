@@ -46,7 +46,6 @@ void Player::Update()
 	{
 		proj->Update();
 	}
-
 	m_timer.Update();
 
 }
@@ -119,7 +118,7 @@ void Player::Cleanup()
 {
 	for (unsigned short index = 0; index < m_projectiles.size(); index++)
 	{
-		if (m_projectiles[index]->m_timer.CompareTime(m_timer.Now(), 2))
+		if (m_projectiles[index]->m_timer.CompareTime(m_timer.Now(), 2) || m_projectiles[index]->CanDestroy())
 		{
 			delete m_projectiles[index];
 			m_projectiles.erase(m_projectiles.begin() + index);

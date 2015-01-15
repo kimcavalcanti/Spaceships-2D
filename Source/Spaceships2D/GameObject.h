@@ -23,7 +23,7 @@ public:
 		m_screenWidth = width;
 	}
 
-	inline void				Destory() { m_destroy = true; }
+	inline void				Destroy() { m_destroy = true; }
 	inline bool				CanDestroy() const { return m_destroy; }
 	inline std::string		Type() const { return m_type; }
 

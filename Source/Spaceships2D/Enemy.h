@@ -15,6 +15,7 @@ public:
 	inline void			SetDestroyTime(const float timeInSeconds) { m_destoryTimer = timeInSeconds; }
 
 protected:
+	bool				Within(const GameObject *gameObject, const Vector4 &vec) const;
 	void				Movement();
 
 	Vector4				m_direction;

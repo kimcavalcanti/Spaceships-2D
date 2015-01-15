@@ -13,6 +13,8 @@ public:
 	void					Render() const;
 
 private:
+	bool					Within(const GameObject *gameObject, const Vector4 &vec) const;
+
 	Vector4					m_direction;
 	Time					m_projectionTimer;
 

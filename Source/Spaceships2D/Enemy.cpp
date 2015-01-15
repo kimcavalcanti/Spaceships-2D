@@ -1,5 +1,6 @@
 #include "Enemy.h"
 #include "ShapeRectangle.h"
+#include "GameLogic.h"
 
 Enemy::Enemy(const float speed, const float originX, const float originY)
 {
@@ -25,7 +26,39 @@ void Enemy::Update()
 	if (m_timer.CompareTime(m_timer.Now(), m_destoryTimer))
 		m_destroy = true;
 
+
+
+	for (const Vector4 &vec : m_shapeComponent->GetVertexList())
+	{
+		if (Within(GameLogic::GetInstance().GetGameObjectList()[0], vec))
+		{
+			GameLogic::GetInstance().GetGameObjectList()[0]->Destroy();
+			this->Destroy();
+			break;
+		}
+	}
+
 	m_frameTimer.Update();
+}
+
+bool Enemy::Within(const GameObject *gameObject, const Vector4 &vec) const
+{
+	bool within = false;
+
+	Vector4 vertI;
+	Vector4 vertJ;
+
+	for (int i = 0, j = 3; i < 4; j = i++)
+	{
+		vertI = gameObject->m_shapeComponent->GetVertexList()[i];
+		vertJ = gameObject->m_shapeComponent->GetVertexList()[j];
+
+		if ((vertI.GetY() > vec.GetY()) != (vertJ.GetY() > vec.GetY()) && (vec.GetX() < (vertJ.GetX() - vertI.GetX()) * (vec.GetY() - vertI.GetY()) / (vertJ.GetY() - vertI.GetY()) + vertI.GetX()))
+		{
+			within = !within;
+		}
+	}
+	return within;
 }
 
 void Enemy::SetDirection(Vector4 direction)
