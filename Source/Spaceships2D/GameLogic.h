@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _GAME_LOGIC_H_
+#define _GAME_LOGIC_H_
+
 #include "GameWindow.h"
 #include <memory>
 #include <random>
@@ -47,9 +49,14 @@ private:
 	unsigned short								m_screenWidth;
 	unsigned short								m_screenHeight;
 	unsigned short								m_enemyCount;
+	unsigned short								m_maxEnemy;
 
 	Time										m_time;
+	Time										m_enemySpawnTimer;
+
+	bool										m_paused;
 
 	std::vector<GameObject*>					m_renderables;
 };
 
+#endif

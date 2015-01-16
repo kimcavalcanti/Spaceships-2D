@@ -85,9 +85,9 @@ std::vector<Vector4> ShapeRectangle::GetVertexList() const
 {
 	return std::vector<Vector4> 
 	{ 
-		m_transformComponent->Transformation(m_bottomLeft),
-		m_transformComponent->Transformation(m_bottomRight),
-		m_transformComponent->Transformation(m_topRight),
-		m_transformComponent->Transformation(m_topLeft)
+		m_bottomLeft,
+		m_bottomRight,
+		m_topRight,
+		m_topLeft
 	};
 }

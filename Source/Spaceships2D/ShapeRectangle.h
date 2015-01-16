@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _SHAPE_RECTANGLE_H_
+#define _SHAPE_RECTANGLE_H_
+
 #include "ShapeComponent.h"
 
 class ShapeRectangle : public ShapeComponent
@@ -25,3 +27,5 @@ private:
 	Vector4					m_bottomRight;
 	Vector4					m_bottomLeft;
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _CHARACTER_H_
+#define _CHARACTER_H_
+
 #include "GameObject.h"
 
 class Character : public GameObject
@@ -17,3 +19,5 @@ protected:
 	float						m_projectileSize;
 	float						m_projectileSpeed;
 };
+
+#endif

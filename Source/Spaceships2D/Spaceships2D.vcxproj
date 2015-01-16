@@ -78,6 +78,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CollisionComponent.cpp" />
+    <ClCompile Include="DeltaTime.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="GameLogic.cpp" />
@@ -90,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="CollisionComponent.h" />
+    <ClInclude Include="DeltaTime.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameLogic.h" />
     <ClInclude Include="GameObject.h" />

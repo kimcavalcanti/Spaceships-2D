@@ -7,6 +7,8 @@
 #define LEFT 2
 #define RIGHT 3
 
+#define PAUSE 0x50
+
 GameLogic::~GameLogic()
 {
 }
@@ -18,6 +20,7 @@ void GameLogic::Initialise(const HINSTANCE hinst)
 	GameLogic::GetInstance().AddNewGameObject(new Player());
 
 	GameLogic::GetInstance().m_random = std::uniform_int_distribution<int>(0, 4);
+	GameLogic::GetInstance().m_maxEnemy = 5;
 }
 
 // Destory all game objects and the game window
@@ -40,8 +43,8 @@ void GameLogic::DestroyGameObject(const GameObject *gameObject)
 		if (m_renderables[index] == gameObject)
 		{
 			delete m_renderables[index];
-
 			m_renderables.erase(m_renderables.begin() + index);
+
 			break;
 		}
 	}
@@ -73,7 +76,7 @@ void GameLogic::SetScreenSize(const int width, const int height)
 // Ensures there are always enemies in game
 void GameLogic::EnemyController()
 {
-	if (m_enemyCount < 20 && m_time.CompareTime(m_time.Now(), 0.1f))
+	if (m_enemyCount < m_maxEnemy && m_time.CompareTime(Time::Now(), 0.1f))
 	{
 		int direction = m_random(m_randomGenerator);
 
@@ -94,6 +97,13 @@ void GameLogic::EnemyController()
 			DestroyGameObject(m_renderables[index]);
 			m_enemyCount--;
 		}
+	}
+
+	// Increase maximum enemy count by one every 5 seconds
+	if (m_enemySpawnTimer.CompareTime(Time::Now(), 5.f) && m_maxEnemy <= 50)
+	{
+		m_maxEnemy++;
+		m_enemySpawnTimer.Update();
 	}
 }
 
@@ -138,7 +148,7 @@ void GameLogic::Run()
 				DispatchMessage(&msg);
 			}
 		}
-		else
+		else if (!m_paused)
 		{
 			// Manage enemies
 			EnemyController();
@@ -157,6 +167,13 @@ void GameLogic::Run()
 
 			// Render game objects to screen
 			GameWindow::GetInstance().Render(m_renderables);
+
+			Time::Delta().Update();
+		}
+		else
+		{
+			// Update time if game is paused -- TODO -- fix enemies/projectiles disappearing when time is paused
+			Time::Delta().Update();
 		}
 
 		// End game if player is touched
@@ -178,6 +195,16 @@ LRESULT GameLogic::WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		GameWindow::GetInstance().SetScreenSize(LOWORD(lparam), HIWORD(lparam));
 		GameLogic::GetInstance().SetScreenSize(LOWORD(lparam), HIWORD(lparam));
 
+		break;
+	case WM_MOVE:
+		// Update the timer when the window is moved
+		Time::Delta().Update();
+		break;
+	case WM_KEYDOWN:
+		if ((unsigned short)GetKeyState(PAUSE) >> 15)
+		{
+			GameLogic::GetInstance().m_paused = !GameLogic::GetInstance().m_paused;
+		}
 		break;
 	default:
 		return DefWindowProc(hwnd, msg, wparam, lparam);

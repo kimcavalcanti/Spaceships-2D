@@ -1,5 +1,9 @@
-#pragma once
-#include <ctime>
+#ifndef _TIME_H_
+#define _TIME_H_
+
+#include "DeltaTime.h"
+
+#define TO_SECONDS 10000000.f
 
 class Time
 {
@@ -8,30 +12,13 @@ public:
 	{
 		Update();
 	}
-
+	
 	~Time() {}
 
 	inline bool					CompareTime(FILETIME ft, float difference) const
 	{
-		return (((ft.dwHighDateTime + ft.dwLowDateTime) / 10000000.f) > (((m_time.dwHighDateTime + m_time.dwLowDateTime) / 10000000.f) + difference));
+		return (((ft.dwHighDateTime + ft.dwLowDateTime) / TO_SECONDS) > (((m_time.dwHighDateTime + m_time.dwLowDateTime) / TO_SECONDS) + difference));
 	}
-
-	inline static FILETIME		Now()
-	{
-		SYSTEMTIME st;
-		FILETIME ft;
-
-		GetSystemTime(&st);
-		SystemTimeToFileTime(&st, &ft);
-
-		return ft;
-	}
-
-	inline FILETIME				Get() const
-	{
-		return m_time;
-	}
-
 
 	inline void					Update()
 	{
@@ -44,9 +31,29 @@ public:
 	// Difference in seconds ##.####
 	inline float				Difference(FILETIME ft) const
 	{
-		return (((ft.dwHighDateTime + ft.dwLowDateTime) / 10000000.f) - ((m_time.dwHighDateTime + m_time.dwLowDateTime) / 10000000.f));
+		return (((ft.dwHighDateTime + ft.dwLowDateTime) / TO_SECONDS) - ((m_time.dwHighDateTime + m_time.dwLowDateTime) / TO_SECONDS));
+	}
+
+	inline static DeltaTime			Delta()
+	{
+		static DeltaTime deltaTime;
+
+		return deltaTime;
+	}
+
+	inline static FILETIME			Now()
+	{
+		SYSTEMTIME st;
+		FILETIME ft;
+
+		GetSystemTime(&st);
+		SystemTimeToFileTime(&st, &ft);
+
+		return ft;
 	}
 
 private:
 	FILETIME						m_time;
 };
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _VECTOR4_H_
+#define _VECTOR4_H_
 
 class Vector4
 {
@@ -36,3 +37,5 @@ private:
 
 typedef Vector4 Vertex4;
 typedef Vector4 Colour4;
+
+#endif

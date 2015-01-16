@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _SHAPE_COMPONENT_H_
+#define _SHAPE_COMPONENT_H_
+
 #include "Object.h"
 #include <Windows.h>
 #include <gl\GL.h>
@@ -27,3 +29,5 @@ protected:
 	byte							m_green;
 	byte							m_blue;
 };
+
+#endif

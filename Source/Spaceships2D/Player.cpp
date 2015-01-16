@@ -25,8 +25,11 @@ void Player::Initialise(const float originX, const float originY)
 	m_shapeComponent = new ShapeRectangle(SIZE);
 	m_shapeComponent->SetColour(65, 105, 225);
 
-	m_shapeComponent->m_transformComponent = this->m_transformComponent;
+	m_shapeComponent->m_transformComponent = m_transformComponent;
 	m_transformComponent->AddTranslation(originX, originY, 0);
+
+	m_collisionComponent.m_transformComponent = m_shapeComponent->m_transformComponent;
+	m_collisionComponent.AddVertex(m_shapeComponent->GetVertexList());
 
 	m_speed = 300;
 	m_projectileSize = 5.f;
@@ -46,14 +49,12 @@ void Player::Update()
 	{
 		proj->Update();
 	}
-	m_timer.Update();
-
 }
 
 void Player::Shoot()
 {
 	// Check for shooting
-	if (m_shootTimer.Difference(m_shootTimer.Now()) > 0.5f)
+	if (m_timer.Difference(Time::Now()) > 0.5f)
 	{
 		if ((unsigned short)GetKeyState(VK_UP) >> 15)
 		{
@@ -80,14 +81,14 @@ void Player::CreateProjectile(const Vector4 &direction)
 	proj->m_shapeComponent->SetColour(255, 48, 48);
 
 	m_projectiles.push_back(proj);
-	m_shootTimer.Update();
+	m_timer.Update();
 }
 
 void Player::Movement()
 {
 	Vector4 translation = m_transformComponent->GetTranslation();
 
-	float movement = m_speed * m_timer.Difference(m_timer.Now());
+	float movement = m_speed * Time::Delta().Get();
 	float padding = SIZE;
 
 	// Check for movement
@@ -118,7 +119,7 @@ void Player::Cleanup()
 {
 	for (unsigned short index = 0; index < m_projectiles.size(); index++)
 	{
-		if (m_projectiles[index]->m_timer.CompareTime(m_timer.Now(), 2) || m_projectiles[index]->CanDestroy())
+		if (m_projectiles[index]->m_timer.CompareTime(Time::Now(), 2) || m_projectiles[index]->CanDestroy())
 		{
 			delete m_projectiles[index];
 			m_projectiles.erase(m_projectiles.begin() + index);

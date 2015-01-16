@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _PLAYER_H_
+#define _PLAYER_H_
+
 #include <vector>
 #include "Projectile.h"
 #include "Character.h"
@@ -21,6 +23,10 @@ private:
 	void						CreateProjectile(const Vector4 &direction);
 	void						Initialise(const float originX, const float originY);
 
+	void						Collision() { ; }
+
 	std::vector<Projectile*>	m_projectiles;
-	Time						m_shootTimer;
+	Time						m_timer;
 };
+
+#endif

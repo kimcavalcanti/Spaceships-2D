@@ -1,16 +1,19 @@
-#pragma once
+#ifndef _GAME_OBJECT_H_
+#define _GAME_OBJECT_H_
+
 #include "Object.h"
 #include "ShapeComponent.h"
 #include "Time.h"
+#include "CollisionComponent.h"
 
 class GameObject : public Object
 {
 public:
-	GameObject()
+	GameObject() : m_destroy{ false }
 	{ 
 		m_shapeComponent = nullptr;
 	}
-
+	
 	virtual ~GameObject() 
 	{ 
 		if (m_shapeComponent)
@@ -33,12 +36,16 @@ public:
 	virtual void			Cleanup() = 0;
 
 	ShapeComponent			*m_shapeComponent;
+	CollisionComponent		m_collisionComponent;
 	Time					m_timer;
 
 protected:
+	virtual void			Collision() = 0;
 	short					m_screenWidth;
 	short					m_screenHeight;
 
 	bool					m_destroy;
 	std::string				m_type;
 };
+
+#endif

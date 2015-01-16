@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _TRANSFORM_COMPONENT_H_
+#define _TRANSFORM_COMPONENT_H_
+
 #include "Vector4.h"
 #include "Matrix4x4.h"
 
@@ -41,3 +43,5 @@ private:
 	Matrix4x4			m_rotationY;
 	Matrix4x4			m_rotationZ;
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _GAME_WINDOW_H_
+#define _GAME_WINDOW_H_
+
 #include "Player.h"
 #include <vector>
 #include <Windows.h>
@@ -37,3 +39,5 @@ private:
 	int											m_height;
 	bool										m_exit;
 };
+
+#endif

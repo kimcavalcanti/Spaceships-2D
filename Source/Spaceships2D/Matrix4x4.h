@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _MATRIX4X4_H_
+#define _MATRIX4X4_H_
+
 #include "Vector4.h"
 
 typedef unsigned char ushort;
@@ -29,3 +31,5 @@ public:
 private:
 	float				m_matrix[4][4];
 };
+
+#endif

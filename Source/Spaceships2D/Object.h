@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _OBJECT_H_
+#define _OBJECT_H_
+
 #include "TransformComponent.h"
 #include <memory>
 #include <fstream>
@@ -15,3 +17,5 @@ public:
 
 	std::shared_ptr<TransformComponent>		m_transformComponent;
 };
+
+#endif

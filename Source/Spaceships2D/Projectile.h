@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _PROJECTILE_H_
+#define _PROJECTILE_H_
+
 #include "GameObject.h"
 
 class Projectile : public GameObject
@@ -13,10 +15,11 @@ public:
 	void					Render() const;
 
 private:
-	bool					Within(const GameObject *gameObject, const Vector4 &vec) const;
+	void					Collision();
+	void					Movement();
 
 	Vector4					m_direction;
-	Time					m_projectionTimer;
-
 	float					m_speed;
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _ENEMY_H_
+#define _ENEMY_H_
+
 #include "Character.h"
 class Enemy : public Character
 {
@@ -12,16 +14,17 @@ public:
 	void				Update();
 	void				Cleanup();
 
-	inline void			SetDestroyTime(const float timeInSeconds) { m_destoryTimer = timeInSeconds; }
+	inline void			SetDestroyTime(const float timeInSeconds) { m_destroyTimer = timeInSeconds; }
 
 protected:
-	bool				Within(const GameObject *gameObject, const Vector4 &vec) const;
 	void				Movement();
+	void				Collision();
 
 	Vector4				m_direction;
 	Time				m_frameTimer;
 
 private:
-	float				m_destoryTimer;
+	float				m_destroyTimer;
 };
 
+#endif
