@@ -26,7 +26,7 @@ private:
 	void						Collision() { ; }
 
 	std::vector<Projectile*>	m_projectiles;
-	Time						m_timer;
+	float						m_timer;
 };
 
 #endif

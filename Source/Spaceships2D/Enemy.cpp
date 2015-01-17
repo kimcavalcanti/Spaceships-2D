@@ -28,8 +28,10 @@ void Enemy::Update()
 	Movement();
 	Collision();
 
-	if (m_timer.CompareTime(Time::Now(), m_destroyTimer))
-		m_destroy = true;
+	if (m_timer > m_duration)
+		Destroy();
+
+	m_timer += Time::DeltaTime();
 }
 
 void Enemy::SetDirection(Vector4 direction)
@@ -39,7 +41,7 @@ void Enemy::SetDirection(Vector4 direction)
 
 void Enemy::Movement()
 {
-	float movement = m_speed * Time::Delta().Get();
+	float movement = m_speed * Time::DeltaTime();
 
 	float deltaX = movement * m_direction.GetX();
 	float deltaY = movement * m_direction.GetY();

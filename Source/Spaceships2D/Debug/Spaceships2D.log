@@ -1,12 +1,22 @@
-﻿Build started 16/01/2015 19:22:36.
+﻿Build started 17/01/2015 11:27:38.
      1>Project "D:\GitHub\Spaceships-2D\Source\Spaceships2D\Spaceships2D.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameLogic.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Enemy.cpp Entry.cpp GameLogic.cpp GameWindow.cpp Player.cpp Projectile.cpp Time.cpp
+         Enemy.cpp
+         Generating Code...
+         Compiling...
+         Time.cpp
          GameLogic.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Projectile.cpp
+         Player.cpp
+         GameWindow.cpp
+         Entry.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHub\Spaceships-2D\Source\Debug\Spaceships2D.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHub\Spaceships-2D\Source\Debug\Spaceships2D.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHub\Spaceships-2D\Source\Debug\Spaceships2D.lib" /MACHINE:X86 Debug\Spaceships2D.res
          Debug\CollisionComponent.obj
-         Debug\DeltaTime.obj
+         Debug\Time.obj
          Debug\Enemy.obj
          Debug\Entry.obj
          Debug\GameLogic.obj
@@ -21,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.55
+Time Elapsed 00:00:02.65

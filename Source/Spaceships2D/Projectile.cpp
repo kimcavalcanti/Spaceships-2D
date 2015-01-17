@@ -2,8 +2,8 @@
 #include "ShapeRectangle.h"
 #include "GameLogic.h"
 
-Projectile::Projectile(const float size, const float speed, const float originX, const float originY, Vector4 direction)
-	: m_speed{ speed }, m_direction{ direction }
+Projectile::Projectile(const float size, const float speed, const float originX, const float originY, Vector4 direction, const float duration)
+	: m_speed{ speed }, m_direction{ direction }, m_duration{ duration }
 {
 	m_type = "Projectile";
 
@@ -27,11 +27,16 @@ void Projectile::Update()
 {
 	Movement();
 	Collision();
+
+	if (m_timer > m_duration)
+		Destroy();
+
+	m_timer += Time::DeltaTime();
 }
 
 void Projectile::Movement()
 {
-	float movement = m_speed * Time::Delta().Get();
+	float movement = m_speed * Time::DeltaTime();
 
 	float deltaX = m_direction.GetX() * movement;
 	float deltaY = m_direction.GetY() * movement;

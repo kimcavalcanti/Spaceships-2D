@@ -8,6 +8,7 @@
 #define RIGHT 3
 
 #define PAUSE 0x50
+#define MAX_ENEMY 50
 
 GameLogic::~GameLogic()
 {
@@ -76,7 +77,7 @@ void GameLogic::SetScreenSize(const int width, const int height)
 // Ensures there are always enemies in game
 void GameLogic::EnemyController()
 {
-	if (m_enemyCount < m_maxEnemy && m_time.CompareTime(Time::Now(), 0.1f))
+	if (m_enemyCount < m_maxEnemy && m_enemySpawnTimer > 0.1f)
 	{
 		int direction = m_random(m_randomGenerator);
 
@@ -100,30 +101,36 @@ void GameLogic::EnemyController()
 	}
 
 	// Increase maximum enemy count by one every 5 seconds
-	if (m_enemySpawnTimer.CompareTime(Time::Now(), 5.f) && m_maxEnemy <= 50)
+	if (m_enemyIncreaseTimer > 5.f && m_maxEnemy <= MAX_ENEMY)
 	{
 		m_maxEnemy++;
-		m_enemySpawnTimer.Update();
+
+		// Reset timer
+		m_enemyIncreaseTimer = 0;
 	}
 }
 
+// Spawn an enemy at a given location, with a direction and speed
 void GameLogic::SpawnEnemy(const float speed, const float originX, const float originY, const Vector4 direction)
 {
 	Enemy *enemy = new Enemy(speed, originX, originY);
 	enemy->SetDirection(direction);
 
+	// Calculate the enemy destroy time = distance / speed
 	if (direction == Vector4::MovementUp() || direction == Vector4::MovementDown())
 	{
-		enemy->SetDestroyTime(m_screenHeight / 100.f);
+		enemy->SetDuration(m_screenHeight / speed);
 	}
 	else if (direction == Vector4::MovementLeft() || direction == Vector4::MovementRight())
 	{
-		enemy->SetDestroyTime(m_screenWidth / 100.f);
+		enemy->SetDuration(m_screenWidth / speed);
 	}
 
 	AddNewGameObject(enemy);
 	m_enemyCount++;
-	m_time.Update();
+
+	// Reset timer
+	m_enemySpawnTimer = 0;
 }
 
 // Run the game loop
@@ -168,12 +175,15 @@ void GameLogic::Run()
 			// Render game objects to screen
 			GameWindow::GetInstance().Render(m_renderables);
 
-			Time::Delta().Update();
+			Time::Update();
+
+			m_enemySpawnTimer += Time::DeltaTime();
+			m_enemyIncreaseTimer += Time::DeltaTime();
 		}
 		else
 		{
-			// Update time if game is paused -- TODO -- fix enemies/projectiles disappearing when time is paused
-			Time::Delta().Update();
+			// Update time if game is paused
+			Time::Update();
 		}
 
 		// End game if player is touched
@@ -198,7 +208,7 @@ LRESULT GameLogic::WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		break;
 	case WM_MOVE:
 		// Update the timer when the window is moved
-		Time::Delta().Update();
+		Time::Update();
 		break;
 	case WM_KEYDOWN:
 		if ((unsigned short)GetKeyState(PAUSE) >> 15)

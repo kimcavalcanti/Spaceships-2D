@@ -51,8 +51,10 @@ private:
 	unsigned short								m_enemyCount;
 	unsigned short								m_maxEnemy;
 
-	Time										m_time;
-	Time										m_enemySpawnTimer;
+	// Timer for enemies spawning
+	float										m_enemySpawnTimer;
+	// Timer for max enemy increasing
+	float										m_enemyIncreaseTimer;
 
 	bool										m_paused;
 

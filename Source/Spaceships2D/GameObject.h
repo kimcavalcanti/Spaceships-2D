@@ -37,7 +37,6 @@ public:
 
 	ShapeComponent			*m_shapeComponent;
 	CollisionComponent		m_collisionComponent;
-	Time					m_timer;
 
 protected:
 	virtual void			Collision() = 0;

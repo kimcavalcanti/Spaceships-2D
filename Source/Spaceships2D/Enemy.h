@@ -14,17 +14,19 @@ public:
 	void				Update();
 	void				Cleanup();
 
-	inline void			SetDestroyTime(const float timeInSeconds) { m_destroyTimer = timeInSeconds; }
+	inline void			SetDuration(const float timeInSeconds) { m_duration = timeInSeconds; }
 
 protected:
 	void				Movement();
 	void				Collision();
 
 	Vector4				m_direction;
-	Time				m_frameTimer;
 
 private:
-	float				m_destroyTimer;
+	// How long the enemy has until it is destroywed
+	float				m_duration;
+
+	float				m_timer;
 };
 
 #endif
