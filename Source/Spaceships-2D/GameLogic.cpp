@@ -139,12 +139,12 @@ void GameLogic::SpawnEnemy(const float speed, const float originX, const float o
 void GameLogic::Run()
 {
 	MSG msg;
-	std::ofstream file;
+	std::fstream file;
 
 	if (!GameWindow::GetInstance().RegisterWindow(m_hinst))
 		return;
 
-	file.open("DeltaTimer.txt");
+	file.open("DeltaTimer.txt", std::fstream::out);
 	while (!m_exit)
 	{
 
