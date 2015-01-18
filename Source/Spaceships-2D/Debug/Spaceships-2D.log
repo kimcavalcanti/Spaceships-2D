@@ -1,9 +1,24 @@
-﻿Build started 18/01/2015 11:33:51.
+﻿Build started 18/01/2015 12:32:02.
      1>Project "D:\GitHub\Spaceships-2D\Source\Spaceships-2D\Spaceships-2D.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameLogic.cpp
+         GameLogic.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHub\Spaceships-2D\Source\Debug\Spaceships-2D.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GitHub\Spaceships-2D\Source\Debug\Spaceships-2D.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHub\Spaceships-2D\Source\Debug\Spaceships-2D.lib" /MACHINE:X86 Debug\Spaceships2D.res
+         Debug\CollisionComponent.obj
+         Debug\Enemy.obj
+         Debug\Entry.obj
+         Debug\GameLogic.obj
+         Debug\GameWindow.obj
+         Debug\Matrix4x4.obj
+         Debug\Player.obj
+         Debug\Projectile.obj
+         Debug\ShapeRectangle.obj
+         Debug\Time.obj
+         Debug\Vector4.obj
          Spaceships-2D.vcxproj -> D:\GitHub\Spaceships-2D\Source\Debug\Spaceships-2D.exe
      1>Done Building Project "D:\GitHub\Spaceships-2D\Source\Spaceships-2D\Spaceships-2D.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:05.15

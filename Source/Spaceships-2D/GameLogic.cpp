@@ -1,7 +1,8 @@
 #include "GameLogic.h"
 #include "Enemy.h"
 #include <windowsx.h>
-#include <thread>
+#include <fstream>
+#include <iostream>
 
 #define UP 0
 #define DOWN 1
@@ -138,12 +139,16 @@ void GameLogic::SpawnEnemy(const float speed, const float originX, const float o
 void GameLogic::Run()
 {
 	MSG msg;
+	std::ofstream file;
 
 	if (!GameWindow::GetInstance().RegisterWindow(m_hinst))
 		return;
 
+	file.open("DeltaTimer.txt");
 	while (!m_exit)
 	{
+
+
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
 			if (msg.message == WM_QUIT)
@@ -192,7 +197,10 @@ void GameLogic::Run()
 		{
 			PostQuitMessage(0);
 		}
+
+		file << Time::DeltaTime() << std::endl;
 	}
+	file.close();
 }
 
 LRESULT GameLogic::WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
