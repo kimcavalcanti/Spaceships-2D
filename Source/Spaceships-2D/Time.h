@@ -3,52 +3,26 @@
 
 #include <Windows.h>
 
-#define TO_SECONDS 10000000.f
-
 class Time
 {
+private:
+	static __int64				m_currentTime;
+	static __int64				m_previousTime;
+
+	static double				m_secondsPerCount;
+	static double				m_deltaTime;
+
+	static bool					m_paused;
+
 public:
 	Time();
+	virtual ~Time();
 
-	~Time();
+	static void				Update();
+	void					Stop() { m_paused = true; }
+	void					Start() { m_paused = false; }
 
-	// Calculate time between frames
-	inline static void				Update()
-	{
-		float temp = UpdateDeltaTime();
-
-		// Sometimes UpdateDeltaTime() returns a negative - ignore it if it does so
-		if (temp > 0)
-			m_deltaTime = temp;
-
-		m_time = Now();
-	}
-
-	inline static float				DeltaTime()
-	{
-		return m_deltaTime;
-	}
-
-private:
-
-	inline static FILETIME&			Now()
-	{
-		static FILETIME ft;
-		SYSTEMTIME st;
-
-		GetSystemTime(&st);
-		SystemTimeToFileTime(&st, &ft);
-
-		return ft;
-	}
-
-	inline static float				UpdateDeltaTime()
-	{
-		return (((Now().dwHighDateTime + Now().dwLowDateTime) / TO_SECONDS) - ((m_time.dwHighDateTime + m_time.dwLowDateTime) / TO_SECONDS));
-	}
-
-	static FILETIME		m_time;
-	static float		m_deltaTime;
+	static inline float		DeltaTime() { return static_cast<float>(m_deltaTime); }
 };
 
 #endif
